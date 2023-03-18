@@ -1,0 +1,181 @@
+.footer {
+  height: 580px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-bottom: 0;
+  background: linear-gradient(180deg, #a1c7d4 0%, #0680aa 100%);
+}
+.footer .footer-main {
+  padding: 15px;
+  display: block;
+}
+.footer .footer-main .footer-logo {
+  display: flex;
+  font-size: 27px;
+  line-height: 140%;
+  color: #0f2d4a;
+}
+.footer .footer-main .footer-logo .tooth {
+  max-width: 55px;
+  max-height: 57px;
+  padding: 0px;
+  margin-right: 10px;
+}
+
+.footer-nav {
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-nav .footer-nav-working {
+  font-size: 14px;
+  line-height: 135%;
+  margin: 15px 0;
+  color: #0f2d4a;
+}
+.footer-nav .footer-nav-items {
+  font-size: 14px;
+  line-height: 135%;
+  margin: 15px 0;
+  color: #0f2d4a;
+}
+
+.lang_en {
+  font-size: 20px;
+  line-height: 23px;
+  color: #1b1d1f;
+  position: relative;
+  padding-left: 30px;
+}
+.lang_en::before {
+  position: absolute;
+  content: "|";
+  top: 0;
+  left: 10px;
+  width: 20px;
+  color: #1b1d1f;
+  font-size: 20px;
+}
+
+p.footer-nav-items a {
+  color: #0f2d4a;
+  transition-duration: 0.3s;
+}
+p.footer-nav-items a:hover {
+  color: #ffffff;
+  transition-duration: 0.3s;
+}
+
+.address {
+  font-size: 21px;
+  line-height: 119%;
+  margin: 44px auto 20px;
+  color: #ffffff;
+}
+
+.contact {
+  margin-top: 15px;
+  font-size: 17px;
+  line-height: 135%;
+  color: #ffffff;
+}
+
+.map {
+  position: relative;
+}
+.map:hover::after {
+  position: absolute;
+  content: "";
+  top: 27px;
+  left: 35px;
+  width: 85%;
+  border-bottom: 1px solid #0f2d4a;
+  left: 0;
+  width: 100%;
+}
+
+.phone {
+  position: relative;
+  padding-left: 40px;
+}
+.phone::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  background-size: contain;
+  background-image: url(/icon/phone.png);
+}
+.phone:hover:after {
+  position: absolute;
+  content: "";
+  top: 27px;
+  left: 35px;
+  width: 85%;
+  border-bottom: 1px solid #0f2d4a;
+}
+
+.insta {
+  position: relative;
+  padding-left: 40px;
+}
+.insta::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  background-size: contain;
+  background-image: url(/icon/instagram.png);
+}
+.insta:hover::after {
+  position: absolute;
+  content: "";
+  top: 27px;
+  left: 35px;
+  width: 85%;
+  border-bottom: 1px solid #0f2d4a;
+}
+
+.email {
+  position: relative;
+  padding-left: 40px;
+}
+.email::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  background-size: contain;
+  background-image: url(/icon/email.png);
+}
+.email:hover::after {
+  position: absolute;
+  content: "";
+  top: 27px;
+  left: 35px;
+  width: 85%;
+  border-bottom: 1px solid #0f2d4a;
+}
+
+.whatsapp {
+  margin-bottom: -7px;
+}
+
+.img:hover {
+  opacity: 0.5;
+}
+
+.copyright {
+  font-size: 13px;
+  margin: 10px 0 0 180px;
+  line-height: 130%;
+  color: #ffffff;
+}

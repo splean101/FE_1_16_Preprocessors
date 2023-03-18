@@ -1,0 +1,51 @@
+@import "_variables";
+@import "_mixin";
+@import '_template';
+
+.images {
+
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  @include marginSection(30px);
+
+  .images-item {
+    display: inline-block;
+    max-width: 280px;
+    margin: 10px;
+  }
+}
+
+@include tablet() {
+
+  .images {
+    flex-direction: row;
+    max-width: 730px;
+    @include marginSection(90px);
+
+    .images-item {
+      max-width: 220px;
+    }
+  }
+}
+
+
+@include leptop() {
+
+  .images {
+    max-width: 980px;
+    @include marginSection(90px);
+
+    .images-item {
+      max-width: 280px;
+    }
+  }
+}
+
+@include desktop() {
+  .images {
+    margin-bottom: 90px;
+  }
+}

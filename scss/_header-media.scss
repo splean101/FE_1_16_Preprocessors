@@ -1,0 +1,114 @@
+@import '_mixin';
+
+@include tablet () {
+  .header {
+    max-width: 750px;
+
+    .logo {
+      font-size: 28px;
+
+      .tooth-header {
+        max-width: 50px;
+        max-height: 52px;
+      }
+
+      .logo-descr {
+        font-size: 26px;
+      }
+    }
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 25px;
+
+    .menu-items {
+      font-size: 16px;
+      color: $mainColor;
+    }
+  }
+
+  .header-phone {
+    font-size: 16px;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+}
+
+@include leptop () {
+
+  .header {
+    max-width: 1100px;
+
+    .logo {
+      margin-top: 60px;
+      font-size: 38px;
+
+      .tooth-header {
+        max-width: 78px;
+        max-height: 80px;
+      }
+    }
+  }
+
+  .menu {
+    gap: 30px;
+  }
+
+  .header-lang {
+    display: inline;
+
+    .lang,
+    .lang_en {
+      font-size: 20px;
+      line-height: 23px;
+      color: $mainColor;
+    }
+
+    .lang_en {
+      position: relative;
+      padding-left: 30px;
+
+      &::before {
+        position: absolute;
+        content: "|";
+        top: 0;
+        left: 10px;
+        width: 20px;
+        color: $mainColor;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@include desktop () {
+
+  .header {
+    max-width: 1100px;
+
+    .logo {
+      font-size: 38px;
+
+      .tooth-header {
+        max-width: 78px;
+        max-height: 80px;
+      }
+
+      .logo-descr {
+        font-size: 26px;
+      }
+    }
+  }
+
+  .menu {
+    gap: 50px;
+  }
+
+  .header-lang {
+    margin-left: 40px;
+  }
+}

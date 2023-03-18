@@ -1,0 +1,96 @@
+.header {
+  max-width: 450px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.header .logo {
+  font-size: 17px;
+  margin-top: 30px;
+  display: flex;
+  color: #46b1de;
+  line-height: 90%;
+}
+.header .logo .tooth-header {
+  max-width: 33px;
+  max-height: 34px;
+  padding: 0px;
+  margin-right: 10px;
+}
+.header .logo .img {
+  padding-right: 10px;
+}
+.header .logo .logo-descr {
+  font-size: 12px;
+}
+.header a:hover {
+  color: #46b1de;
+}
+
+.header-phone {
+  font-size: 12px;
+  color: #1b1d1f;
+  position: relative;
+}
+.header-phone::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -20px;
+  width: 15px;
+  height: 15px;
+  background-image: url(/img/phone.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header-lang,
+.menu {
+  display: none;
+}
+
+.burger-menu {
+  display: block;
+  width: 20px;
+  height: 15px;
+  position: relative;
+  background: transparent;
+  border: none;
+}
+.burger-menu span, .burger-menu::before, .burger-menu::after {
+  content: "";
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #1b1d1f;
+}
+.burger-menu::before {
+  top: 0;
+  transition-duration: 0.2s;
+}
+.burger-menu::after {
+  bottom: 0;
+  transition-duration: 0.2s;
+}
+.burger-menu span {
+  top: calc(50% - 1px);
+}
+.burger-menu:focus::before {
+  top: calc(50% - 1px);
+  transform: rotate(-45deg);
+  background-color: #46b1de;
+}
+.burger-menu:focus:after {
+  top: calc(50% - 1px);
+  transform: rotate(45deg);
+  background-color: #46b1de;
+}
+.burger-menu:focus span {
+  width: 0;
+}
+.burger-menu:hover span, .burger-menu:hover::before, .burger-menu:hover::after {
+  background-color: #46b1de;
+}

@@ -1,0 +1,125 @@
+@import '_variables';
+@import '_mixin';
+@import '_template';
+
+.advantages {
+  display: block;
+  max-width: 350px;
+  text-align: center;
+   @include marginSection(30px auto);
+
+  .title {
+    @extend %title;
+    font-size: 22px;
+    
+
+    .accent {
+      color: $accentColor;
+    }
+  }
+
+  .advantages-text {
+    line-height: 140%;
+    color: $mainColor;
+    font-size: 14px;
+  }
+}
+
+.backgrnd-accent {
+  max-width: 300px;
+  height: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  background: #a1c7d4;
+  border-radius: 12px;
+
+  .advantage-descr {
+    max-width: 270px;
+    height: 130px;
+    background-color: $superlightColor;
+    border-radius: $borderRadius;
+    padding: 10px 15px;
+
+    .text-descr {
+      font-size: 14px;
+      line-height: 119%;
+      padding: 5px 10px;
+    }
+
+    .color-block {
+      display: flex;
+      color: $accentColor;
+
+      .number-descr {
+        font-size: 40px;
+        margin: 0 10px;
+        line-height: 117%;
+      }
+
+      .name-descr {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 117%;
+      }
+    }
+  }
+}
+
+@include tablet() {
+
+  .advantages {
+    margin: 90px auto;
+    max-width: 700px;
+    @include marginSection(90px auto);
+
+  }
+
+  .backgrnd-accent {
+    max-width: 580px;
+    height: 550px;
+
+    .advantage-descr {
+      max-width: 250px;
+      height: 160px;
+
+      .color-block {
+        .name-descr {
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 117%;
+        }
+      }
+    }
+  }
+}
+
+@include desktop() {
+
+  .advantages {
+    margin: 150px auto 66px auto;
+    max-width: 1150px;
+
+    .title {
+      font-size: 34px;
+      
+    }
+
+    .advantages-text {
+      font-size: 16px;
+    }
+  }
+
+  .backgrnd-accent {
+    max-width: 1020px;
+    height: 400px;
+    margin: 50px auto;
+
+    .advantage-descr {
+      max-width: 300px;
+      height: 176px;
+    }
+  }
+}

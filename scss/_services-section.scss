@@ -1,0 +1,334 @@
+@import "_variables";
+@import "_mixin";
+@import '_template';
+
+.services {
+  max-width: 400px;
+  min-height: 750px;
+  text-align: center;
+   @include marginSection(30px);
+
+  .services-title {
+    font-size: 22px;
+    @extend %title;
+  }
+
+  .services-blok {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.services-descr {
+  display: none;
+}
+
+.service1,
+.service2,
+.service3,
+.service4,
+.service5,
+.service6 {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid $lightColor;
+  box-shadow: 0px 2px 10px $lightColor;
+  border-radius: $borderRadius;
+
+  .services-name-descr {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 135%;
+    color: $accentColor;
+    padding: 2px 5px;
+  }
+}
+
+.attent-img {
+  max-width: 80px;
+  margin: 0 0 -40px 0;
+}
+
+.attent-text {
+  font-size: 16px;
+  line-height: 140%;
+  color:$accentColor;
+}
+
+@include tablet() {
+  .services {
+    max-width: 720px;
+    min-height: 600px;
+     @include marginSection(90px);
+    
+
+    .animate-services {
+      margin: 10px auto;
+    }
+  }
+
+  .service1,
+  .service2,
+  .service3,
+  .service4,
+  .service5,
+  .service6 {
+    width: 500px;
+    margin: 10px;
+  }
+}
+
+@include leptop() {
+
+  .services {
+    max-width: 950px;
+    min-height: 400px;
+
+    .services-title {
+      font-size: 34px;
+    }
+  }
+
+  .services-blok {
+    max-width: 950px;
+    height: 300px;
+    margin: 0px auto 30px auto;
+
+    .animate-services {
+      display: block;
+      margin: 0 auto;
+      width: 450px;
+      height: 350px;
+      position: relative;
+      border-radius: 50%;
+      animation-name: animation-ellipses;
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+      animation-delay: 5s;
+
+      .services-descr {
+        position: absolute;
+        display: inline;
+        width: 200px;
+        height: 200px;
+        border: 1px solid $mainColor;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .big-tooth {
+          width: 180px;
+          height: 180px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  .animate-tooth-item {
+    width: 0px;
+    height: 0px;
+    position: relative;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: animation-ellipses-item;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+
+    .ellipse {
+      width: 24px;
+      height: 24px;
+      background: $accentColor;
+      border-radius: 50%;
+      font-size: 18px;
+      line-height: 140%;
+      color: $superlightColor;
+      text-align: center;
+      position: absolute;
+      margin: -12px;
+    }
+
+    .el1 {
+      top: 10%;
+      left: 20%;
+    }
+
+    .el2 {
+      top: 45%;
+      left: 1%;
+    }
+
+    .el3 {
+      bottom: 15%;
+      left: 14%;
+    }
+
+    .el4 {
+      top: 10%;
+      right: 20%;
+    }
+
+    .el5 {
+      top: 45%;
+      right: 1%;
+    }
+
+    .el6 {
+      bottom: 15%;
+      right: 14%;
+    }
+  }
+
+  .service1,
+  .service2,
+  .service3,
+  .service4,
+  .service5,
+  .service6 {
+    position: absolute;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+
+    .services-name-descr {
+      font-size: 20px;
+      padding: 2px 0;
+    }
+  }
+
+  .service1 {
+    text-align: right;
+    width: 350px;
+    top: 5%;
+    left: -50%;
+  }
+
+  .service2 {
+    text-align: right;
+    width: 300px;
+    top: 38%;
+    left: -55%;
+  }
+
+  .service3 {
+    text-align: right;
+    width: 320px;
+    top: 72%;
+    left: -45%;
+  }
+
+  .service4 {
+    text-align: left;
+    width: 280px;
+    top: 5%;
+    left: 72%;
+  }
+
+  .service5 {
+    text-align: left;
+    width: 300px;
+    top: 38%;
+    left: 90%;
+  }
+
+  .service6 {
+    text-align: left;
+    width: 300px;
+    top: 72%;
+    left: 75%;
+  }
+
+  .attent-img {
+    max-width: 105px;
+    margin: 50px 0 -40px 0;
+  }
+
+  .attent-text {
+    font-size: 20px;
+  }
+}
+
+@include desktop() {
+
+  .services {
+    max-width: 1300px;
+    height: 650px;
+  }
+
+  .services-blok {
+    max-width: 1300px;
+    height: 400px;
+    margin: 30px auto;
+
+    .animate-services {
+      width: 600px;
+      height: 400px;
+
+      .services-descr {
+        width: 330px;
+        height: 330px;
+
+        .big-tooth {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+  }
+
+  .service1,
+  .service2,
+  .service3,
+  .service4,
+  .service5,
+  .service6 {
+    width: 350px;
+
+    .text-descr {
+      padding: 0;
+    }
+  }
+
+  .service1 {
+    top: 5%;
+    left: -35%;
+  }
+
+  .service2 {
+    width: 300px;
+    top: 35%;
+    left: -40%;
+  }
+
+  .service3 {
+    width: 320px;
+    top: 70%;
+    left: -35%;
+  }
+
+  .service4 {
+    width: 280px;
+    top: 5%;
+    left: 77%;
+  }
+
+  .service6 {
+    width: 300px;
+    top: 72%;
+    left: 80%;
+  }
+
+  .attent-img {
+    margin: 10px 0 -40px 0;
+  }
+}

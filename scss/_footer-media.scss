@@ -1,0 +1,88 @@
+@import "_variables";
+@import "_mixin";
+
+
+@include tablet() {
+
+  .footer {
+    height: 400px;
+   @include marginSection(90px);
+   margin-bottom: 0;
+    background: linear-gradient(91.75deg, #a1c7d4 18.06%, #0680aa 98.16%);
+
+
+    .footer-main {
+      max-height: 400px;
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+
+      .footer-logo {
+        font-size: 38px;
+
+        .tooth {
+          max-width: 78px;
+          max-height: 80px;
+        }
+      }
+    }
+  }
+
+  .footer-nav {
+    max-width: 300px;
+
+    .footer-nav-items {
+      font-size: 20px;
+    }
+
+    .footer-nav-workingHours {
+      margin-top: 25px;
+
+      .footer-nav-working {
+        font-size: 20px;
+        margin: 0;
+      }
+    }
+  }
+
+  .address {
+    font-weight: 600;
+    font-size: 34px;
+  }
+
+  .contact {
+    font-size: 20px;
+  }
+}
+
+@include leptop() {
+
+  .footer {
+    margin: 90px auto 0 auto;
+
+    .footer-main {
+      padding: 80px 130px 80px 100px;
+    }
+  }
+}
+
+@include desktop() {
+
+  .footer-main {
+    padding: 100px 180px 100px 100px;
+  }
+
+  .footer-nav {
+    max-width: 400px;
+
+    .footer-nav-workingHours {
+      margin-top: 25px;
+
+      .footer-nav-working {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

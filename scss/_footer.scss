@@ -1,0 +1,197 @@
+@import "_variables";
+@import '_template';
+@import '_mixin';
+
+
+.footer {
+  height: 580px;
+  @include marginSection(30px);
+  margin-bottom: 0;
+  background: linear-gradient(180deg, #a1c7d4 0%, #0680aa 100%);
+
+  .footer-main {
+    padding: 15px;
+    display: block;
+
+    .footer-logo {
+      display: flex;
+      font-size: 27px;
+      line-height: 140%;
+      color: $hoverFooterColor;
+
+      .tooth {
+        max-width: 55px;
+        max-height: 57px;
+        padding: 0px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.footer-nav {
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+
+  .footer-nav-working {
+    font-size: 14px;
+    line-height: 135%;
+    margin: 15px 0;
+    color: $hoverFooterColor;
+  }
+
+  .footer-nav-items {
+    font-size: 14px;
+    line-height: 135%;
+    margin: 15px 0;
+    color: $hoverFooterColor;
+  }
+}
+
+.lang_en {
+  font-size: 20px;
+  line-height: 23px;
+  color: $mainColor;
+  position: relative;
+  padding-left: 30px;
+ 
+  &::before {
+    position: absolute;
+    content: "|";
+    top: 0;
+    left: 10px;
+    width: 20px;
+    color: $mainColor;
+    font-size: 20px;
+  }
+}
+
+p.footer-nav-items a {
+  color: $hoverFooterColor;
+  transition-duration: 0.3s;
+
+  &:hover {
+    color: $superlightColor;
+    transition-duration: 0.3s;
+  }
+}
+
+.address {
+  font-size: 21px;
+  line-height: 119%;
+  margin: 44px auto 20px;
+  color: $superlightColor;
+}
+
+.contact {
+  margin-top: 15px;
+  font-size: 17px;
+  line-height: 135%;
+  color: $superlightColor;
+}
+
+.map {
+  position: relative;
+
+  &:hover::after {
+    position: absolute;
+    content: "";
+    top: 27px;
+    left: 35px;
+    width: 85%;
+    border-bottom: 1px solid $hoverFooterColor;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.phone {
+  position: relative;
+  padding-left: 40px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    background-size: contain;
+    background-image: url(/icon/phone.png);
+  }
+
+  &:hover:after {
+    position: absolute;
+    content: "";
+    top: 27px;
+    left: 35px;
+    width: 85%;
+    border-bottom: 1px solid $hoverFooterColor;
+  }
+}
+
+.insta {
+  position: relative;
+  padding-left: 40px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    background-size: contain;
+    background-image: url(/icon/instagram.png);
+  }
+
+  &:hover::after {
+    position: absolute;
+    content: "";
+    top: 27px;
+    left: 35px;
+    width: 85%;
+    border-bottom: 1px solid $hoverFooterColor;
+  }
+}
+
+.email {
+  position: relative;
+  padding-left: 40px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    background-size: contain;
+    background-image: url(/icon/email.png);
+  }
+
+  &:hover::after {
+    position: absolute;
+    content: "";
+    top: 27px;
+    left: 35px;
+    width: 85%;
+    border-bottom: 1px solid $hoverFooterColor;
+  }
+}
+
+.whatsapp {
+  margin-bottom: -7px;
+}
+
+.img:hover {
+    opacity: 0.5;
+  }
+
+.copyright {
+  font-size: 13px;
+  margin: 10px 0 0 180px;
+  line-height: 130%;
+  color: $superlightColor;
+}

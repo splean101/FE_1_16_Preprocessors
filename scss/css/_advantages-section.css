@@ -1,0 +1,110 @@
+.advantages .title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  color: #1b1d1f;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 130%;
+  margin-bottom: 5px;
+}
+
+.advantages {
+  display: block;
+  max-width: 350px;
+  text-align: center;
+  margin: 30px auto;
+}
+.advantages .title {
+  font-size: 22px;
+}
+.advantages .title .accent {
+  color: #46b1de;
+}
+.advantages .advantages-text {
+  line-height: 140%;
+  color: #1b1d1f;
+  font-size: 14px;
+}
+
+.backgrnd-accent {
+  max-width: 300px;
+  height: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  background: #a1c7d4;
+  border-radius: 12px;
+}
+.backgrnd-accent .advantage-descr {
+  max-width: 270px;
+  height: 130px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+.backgrnd-accent .advantage-descr .text-descr {
+  font-size: 14px;
+  line-height: 119%;
+  padding: 5px 10px;
+}
+.backgrnd-accent .advantage-descr .color-block {
+  display: flex;
+  color: #46b1de;
+}
+.backgrnd-accent .advantage-descr .color-block .number-descr {
+  font-size: 40px;
+  margin: 0 10px;
+  line-height: 117%;
+}
+.backgrnd-accent .advantage-descr .color-block .name-descr {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 117%;
+}
+
+@media (min-width: 768px) {
+  .advantages {
+    margin: 90px auto;
+    max-width: 700px;
+    margin: 90px auto;
+  }
+
+  .backgrnd-accent {
+    max-width: 580px;
+    height: 550px;
+  }
+  .backgrnd-accent .advantage-descr {
+    max-width: 250px;
+    height: 160px;
+  }
+  .backgrnd-accent .advantage-descr .color-block .name-descr {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 117%;
+  }
+}
+@media (min-width: 1400px) {
+  .advantages {
+    margin: 150px auto 66px auto;
+    max-width: 1150px;
+  }
+  .advantages .title {
+    font-size: 34px;
+  }
+  .advantages .advantages-text {
+    font-size: 16px;
+  }
+
+  .backgrnd-accent {
+    max-width: 1020px;
+    height: 400px;
+    margin: 50px auto;
+  }
+  .backgrnd-accent .advantage-descr {
+    max-width: 300px;
+    height: 176px;
+  }
+}

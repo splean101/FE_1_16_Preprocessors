@@ -1,0 +1,78 @@
+@import '_null';
+@import '_variables';
+@import '_template';
+@import '_mixin';
+@import '_header';
+@import '_header-media';
+@import '_main';
+@import '_main-media';
+@import '_cards-section';
+@import '_advantages-section';
+@import '_services-section';
+@import '_form-section';
+@import '_images-section';
+@import '_footer';
+@import '_footer-media';
+@import '_animate';
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: $mainColor;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  font-style: normal;
+}
+
+li {
+  margin-top: 15px;
+}
+
+li a:hover {
+  color: $hoverFooterColor;
+  transition-duration: 0.3s;
+}
+
+p {
+  .img:hover {
+    opacity: 0.5;
+  }
+}
+
+.first-screen {
+  background-image: url("/img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 568px;
+  position: relative;
+}
+
+@include tablet () {
+  .first-screen {
+    height: 600px;
+  }
+}
+
+@include leptop () {
+  .first-screen {
+    height: 663px;
+  }
+}
+
+@include desktop () {
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+ 
+}
+
+.triangle{
+  @include triangle (50px, $accentColor)
+}
+
